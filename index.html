@@ -103,7 +103,29 @@
     <script defer="" src="./assets/functionality.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            function colorPastelPorLetra(letra) {
+            fetch('https://nocodb.juanma.app/api/v2/tables/mwonxxs73rj8p2y/records?where=(active,eq,1)', {
+                method: 'GET',
+                headers: {
+                    'xc-token': 'KvIsjaRMeCm6VViKQ-X8wP0oNC-JtfggAyM4s86O'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Datos recibidos:', data);
+                data.list.forEach(item => {
+                    const li = document.createElement('li');
+                    li.onclick = () => window.open(item.url, '_blank');
+                    li.style.cursor = 'pointer';
+                    li.innerHTML = `
+                        <img src="https://nocodb.juanma.app/${item.image?.[0]?.thumbnails?.card_cover.signedPath}" alt="">
+                        <div class="experienceDetails">
+                            <h3>${item.Title}</h3>
+                            <p>${item.description}</p>
+                            ${item.tags ? item.tags.split(',').map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
+                        </div>
+                    `;
+                    document.querySelector('.experience ul').appendChild(li);
+                    function colorPastelPorLetra(letra) {
                 var codigo = letra.charCodeAt(0);
                 var hue = (codigo * 137.5) % 360;
                 return `hsl(${hue}, 100%, 85%)`;
@@ -113,6 +135,12 @@
             etiquetas.forEach(function(etiqueta) {
                 var primeraLetra = etiqueta.innerText.trim()[0].toUpperCase();
                 etiqueta.style.backgroundColor = colorPastelPorLetra(primeraLetra);
+            });
+
+                });
+            })
+            .catch(error => {
+                console.error('Error en la petición:', error);
             });
         });
     </script>
