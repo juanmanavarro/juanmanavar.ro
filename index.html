@@ -32,43 +32,66 @@
 			<div class="innerWrap">
 				<h2>Jobs</h2>
                 <ul class="quotes quotes1">
+                    <li onclick="window.open('https://chromewebstore.google.com/detail/whatsapp-new-chat/nnajdgecgicbdfgepiifbpkffcjokgbh', '_blank')" style="cursor: pointer;">
+                        <img src="./img/whatsapp-chat.png" alt="">
+                        <div class="experienceDetails">
+                            <h3>WhatsApp New Chat</h3>
+                            <p>Chrome extension to open a new chat in WhatsApp without saving the contact.</p>
+                            <span class="tag">Chrome Extension</span>
+                        </div>
+                    </li>
                     <li onclick="window.open('https://luzriquelme.info', '_blank')" style="cursor: pointer;">
                         <img src="./img/luz.png" alt="">
                         <div class="experienceDetails">
                             <h3>luzriquelme.info</h3>
-                            <p style="margin-bottom: 10px;">Security and usability improvements.</p>
+                            <p>Security and usability improvements.</p>
                             <span class="tag">Wordpress</span>
-                        </div><!-- /experienceDetails-->
+                        </div>
                     </li>
-                </ul><!-- /quotes -->
+                </ul>
                 <ul class="quotes quotes2">
                     <li onclick="window.open('https://www.malone.es', '_blank')" style="cursor: pointer;">
                         <img src="./img/malone.png" alt="">
                         <div class="experienceDetails">
                             <h3>malone.es</h3>
-                            <p style="margin-bottom: 10px;">Fixes and improvements.</p>
+                            <p>Fixes and improvements.</p>
                             <span class="tag">Wordpress</span>
-                        </div><!-- /experienceDetails-->
+                        </div>
                     </li>
-                </ul><!-- /quotes -->
-			</div><!-- /innerWrap -->
+                </ul>
+			</div>
 		</div>
 
         <div class="footer">
             <div class="innerWrap">
                 <!-- <p>© Handcafted by Jon Lamb</p> -->
                 <ul>
-                    <li><a href="https://uk.linkedin.com/in/jon-lamb-ux" target="_blank">LINKEDIN</a></li>
+                    <li><a href="https://www.linkedin.com/in/juanmanavarro/" target="_blank">LINKEDIN</a></li>
                     <li><a rel="nofollow" href="mailto:hola@juanmanavar.ro">EMAIL</a></li>
                 </ul>
-            </div><!-- /innerWrap -->
-        </div><!-- /footer -->
-    </div><!-- /wrapper -->
+            </div>
+        </div>
+    </div>
 
     <script defer="" src="./assets/jquery-1.7.1-min.js"></script>
     <script defer="" src="./assets/easing.min.js"></script>
     <script defer="" src="./assets/jquery.waypoints.min.js"></script>
     <script defer="" src="./assets/functionality.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function colorPastelPorLetra(letra) {
+                var codigo = letra.charCodeAt(0);
+                var hue = (codigo * 137.5) % 360;
+                return `hsl(${hue}, 100%, 85%)`;
+            }
+
+            var etiquetas = document.querySelectorAll('.tag');
+            etiquetas.forEach(function(etiqueta) {
+                var primeraLetra = etiqueta.innerText.trim()[0].toUpperCase();
+                etiqueta.style.backgroundColor = colorPastelPorLetra(primeraLetra);
+            });
+        });
+    </script>
 
 </body>
 </html>

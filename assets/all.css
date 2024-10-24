@@ -219,8 +219,9 @@ p {
     color: #1C1C21;
     font-weight: 400;
     font-size: 18px;
-    line-height: 29px;
+    line-height: 20px;
     letter-spacing: -.02em;
+    margin-bottom: 20px;
     /* float: left; */
 }
 
