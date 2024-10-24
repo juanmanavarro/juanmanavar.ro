@@ -111,7 +111,6 @@
             })
             .then(response => response.json())
             .then(data => {
-                console.log('Datos recibidos:', data);
                 data.list.forEach(item => {
                     const li = document.createElement('li');
                     li.onclick = () => window.open(item.url, '_blank');
@@ -124,19 +123,23 @@
                             ${item.tags ? item.tags.split(',').map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
                         </div>
                     `;
-                    document.querySelector('.experience ul').appendChild(li);
+
+                    if (item.Id % 2 === 1) {
+                        document.querySelector('.experience ul.quotes2').appendChild(li);
+                    } else {
+                        document.querySelector('.experience ul.quotes1').appendChild(li);
+                    }
                     function colorPastelPorLetra(letra) {
-                var codigo = letra.charCodeAt(0);
-                var hue = (codigo * 137.5) % 360;
-                return `hsl(${hue}, 100%, 85%)`;
-            }
+                        var codigo = letra.charCodeAt(0);
+                        var hue = (codigo * 137.5) % 360;
+                        return `hsl(${hue}, 100%, 85%)`;
+                    }
 
-            var etiquetas = document.querySelectorAll('.tag');
-            etiquetas.forEach(function(etiqueta) {
-                var primeraLetra = etiqueta.innerText.trim()[0].toUpperCase();
-                etiqueta.style.backgroundColor = colorPastelPorLetra(primeraLetra);
-            });
-
+                    var etiquetas = document.querySelectorAll('.tag');
+                    etiquetas.forEach(function(etiqueta) {
+                        var primeraLetra = etiqueta.innerText.trim()[0].toUpperCase();
+                        etiqueta.style.backgroundColor = colorPastelPorLetra(primeraLetra);
+                    });
                 });
             })
             .catch(error => {
