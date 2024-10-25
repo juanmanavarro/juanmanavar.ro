@@ -44,14 +44,6 @@
 		<div class="testimonials experience grey" style="opacity: 1; bottom: 0px;">
 			<div class="innerWrap">
                 <ul class="quotes quotes1">
-                    <li onclick="window.open('https://chromewebstore.google.com/detail/whatsapp-new-chat/nnajdgecgicbdfgepiifbpkffcjokgbh', '_blank')" style="cursor: pointer;">
-                        <img src="./img/whatsapp-chat.png" alt="">
-                        <div class="experienceDetails">
-                            <h3>WhatsApp New Chat</h3>
-                            <p>Chrome extension to open a new chat in WhatsApp without saving the contact.</p>
-                            <span class="tag">Chrome Extension</span>
-                        </div>
-                    </li>
                     <li onclick="window.open('https://luzriquelme.info', '_blank')" style="cursor: pointer;">
                         <img src="./img/luz.png" alt="">
                         <div class="experienceDetails">
@@ -129,16 +121,20 @@
                     } else {
                         document.querySelector('.experience ul.quotes1').appendChild(li);
                     }
-                    function colorPastelPorLetra(letra) {
-                        var codigo = letra.charCodeAt(0);
-                        var hue = (codigo * 137.5) % 360;
+
+                    function colorPastelPorPalabra(palabra) {
+                        var suma = 0;
+                        for (var i = 0; i < palabra.length; i++) {
+                            suma += palabra.charCodeAt(i);
+                        }
+                        var hue = (suma * 137.5) % 360;
                         return `hsl(${hue}, 100%, 85%)`;
                     }
 
                     var etiquetas = document.querySelectorAll('.tag');
                     etiquetas.forEach(function(etiqueta) {
-                        var primeraLetra = etiqueta.innerText.trim()[0].toUpperCase();
-                        etiqueta.style.backgroundColor = colorPastelPorLetra(primeraLetra);
+                        var palabra = etiqueta.innerText.trim();
+                        etiqueta.style.backgroundColor = colorPastelPorPalabra(palabra);
                     });
                 });
             })
