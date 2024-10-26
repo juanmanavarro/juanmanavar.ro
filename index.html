@@ -1,32 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Juanma Navarro | Freelance Developer</title>
-    <meta name="description" content="Juanma Navarro | Freelance Developer">
+    <title>Juanma Navarro | Desarrollador Freelance</title>
+    <meta name="description" content="Juanma Navarro | Desarrollador Freelance">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/all.css" type="text/css">
     <link rel="stylesheet" href="./assets/my.css" type="text/css">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
     <link rel="icon" href="./favicon.jpg">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
+    <script>
+        function createDataRetriever() {
+            return {
+                jobs: [],
+                fetchJobs() {
+                    fetch('https://nocodb.juanma.app/api/v2/tables/mwonxxs73rj8p2y/records?where=(active,eq,1)&shuffle=1', {
+                        method: 'GET',
+                        headers: {
+                            'xc-token': 'KvIsjaRMeCm6VViKQ-X8wP0oNC-JtfggAyM4s86O'
+                        },
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        this.jobs = data.list;
+                    })
+                    .catch(error => {
+                        console.error('Error al obtener los trabajos:', error);
+                    });
+                }
+            }
+        }
+    </script>
 </head>
 <body>
-    <noscript>
-        <style type="text/css">
-            .wrapper {opacity: 1; display: block;}
-        </style>
-    </noscript>
-
     <div class="wrapper" style="display: block; opacity: 1;">
         <div class="footer">
             <div class="innerWrap" style="display: flex; justify-content: center;">
-                <!-- <p>© Handcafted by Jon Lamb</p> -->
                 <ul>
                     <li><a href="https://github.com/juanmanavarro" target="_blank">GITHUB</a></li>
                     <li><a href="https://telegram.me/juanmanavarro" target="_blank">TELEGRAM</a></li>
                     <li><a href="https://api.whatsapp.com/send?phone=34613086944" target="_blank">WHATSAPP</a></li>
                     <li><a href="https://www.linkedin.com/in/juanmanavarro/" target="_blank">LINKEDIN</a></li>
                     <li><a rel="nofollow" href="mailto:hola@juanmanavar.ro">EMAIL</a></li>
-                    <li><a href="tel:+34613086944">PHONE</a></li>
+                    <li><a href="tel:+34613086944">TELÉFONO</a></li>
                 </ul>
             </div>
         </div>
@@ -36,113 +53,57 @@
                     <h1 class="titleSlideUp aboutTitle" style="margin-bottom: 0px;">
                         <span class="first" style="opacity: 1; bottom: 0px;">Juanma Navarro</span>
                     </h1>
-                    <p style="opacity: 1; bottom: 0px;">Freelance Developer</p>
+                    <p style="opacity: 1; bottom: 0px;">Desarrollador Freelance</p>
                 </div>
             </div>
         </div>
 
-		<div class="testimonials experience grey" style="opacity: 1; bottom: 0px;">
-			<div class="innerWrap">
-                <ul class="quotes quotes1">
-                    <li onclick="window.open('https://luzriquelme.info', '_blank')" style="cursor: pointer;">
-                        <img src="./img/luz.png" alt="">
-                        <div class="experienceDetails">
-                            <h3>luzriquelme.info</h3>
-                            <p>Security and usability improvements.</p>
-                            <span class="tag">Wordpress</span>
+        <div class="testimonials experience grey container-fluid px-3" style="opacity: 1; bottom: 0px;">
+            <div x-data="createDataRetriever()" x-init="fetchJobs()" class="row">
+                <template x-if="jobs.length > 0">
+                <div class="row">
+                    <template x-for="job in jobs" :key="job.Id">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-4">
+                            <div class="experienceItem bg-white h-100" style="cursor: pointer; border-radius: 10px;">
+                                <template x-if="job.image && job.image[0] && job.image[0].thumbnails && job.image[0].thumbnails.card_cover">
+                                    <img :src="`https://nocodb.juanma.app/${job.image[0].thumbnails.card_cover.signedPath}`"
+                                            class="img-fluid w-100"
+                                            :alt="job.Title"
+                                            style="border-top-left-radius: 10px; border-top-right-radius: 10px; object-fit: cover; height: 200px;">
+                                </template>
+                                <div class="p-4">
+                                    <h3 x-text="job.Title" class="mb-3"></h3>
+                                    <p x-text="job.description" class="mb-3"></p>
+                                    <template x-if="job.tags">
+                                        <div>
+                                            <template x-for="tag in job.tags.split(',')">
+                                                <span class="badge bg-primary me-1 mb-1" x-text="tag.trim()"></span>
+                                            </template>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                </ul>
-                <ul class="quotes quotes2">
-                    <li onclick="window.open('https://asociacionsindromesago.org', '_blank')" style="cursor: pointer;">
-                        <img src="./img/ago.png" alt="">
-                        <div class="experienceDetails">
-                            <h3>asociacionsindromesago.org</h3>
-                            <p>Payment gateway for donations.</p>
-                            <span class="tag">Stripe</span>
-                        </div>
-                    </li>
-                    <li onclick="window.open('https://www.malone.es', '_blank')" style="cursor: pointer;">
-                        <img src="./img/malone.png" alt="">
-                        <div class="experienceDetails">
-                            <h3>malone.es</h3>
-                            <p>Fixes and improvements.</p>
-                            <span class="tag">Wordpress</span>
-                        </div>
-                    </li>
-                </ul>
-			</div>
-		</div>
+                    </template>
+                </div>
+                <template x-if="jobs.length === 0">
+                    <p>No hay trabajos disponibles en este momento.</p>
+                </template>
+            </div>
+        </div>
 
         <div class="footer">
             <div class="innerWrap" style="display: flex; justify-content: center;">
-                <!-- <p>© Handcafted by Jon Lamb</p> -->
                 <ul>
                     <li><a href="https://github.com/juanmanavarro" target="_blank">GITHUB</a></li>
                     <li><a href="https://telegram.me/juanmanavarro" target="_blank">TELEGRAM</a></li>
                     <li><a href="https://api.whatsapp.com/send?phone=34613086944" target="_blank">WHATSAPP</a></li>
                     <li><a href="https://www.linkedin.com/in/juanmanavarro/" target="_blank">LINKEDIN</a></li>
                     <li><a rel="nofollow" href="mailto:hola@juanmanavar.ro">EMAIL</a></li>
-                    <li><a href="tel:+34613086944">PHONE</a></li>
+                    <li><a href="tel:+34613086944">TELÉFONO</a></li>
                 </ul>
             </div>
         </div>
     </div>
-
-    <script defer="" src="./assets/jquery-1.7.1-min.js"></script>
-    <script defer="" src="./assets/easing.min.js"></script>
-    <script defer="" src="./assets/jquery.waypoints.min.js"></script>
-    <script defer="" src="./assets/functionality.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('https://nocodb.juanma.app/api/v2/tables/mwonxxs73rj8p2y/records?where=(active,eq,1)&shuffle=1', {
-                method: 'GET',
-                headers: {
-                    'xc-token': 'KvIsjaRMeCm6VViKQ-X8wP0oNC-JtfggAyM4s86O'
-                },
-            })
-            .then(response => response.json())
-            .then(data => {
-                data.list.forEach(item => {
-                    const li = document.createElement('li');
-                    li.onclick = () => window.open(item.url, '_blank');
-                    li.style.cursor = 'pointer';
-                    li.innerHTML = `
-                        <img src="https://nocodb.juanma.app/${item.image?.[0]?.thumbnails?.card_cover.signedPath}" alt="">
-                        <div class="experienceDetails">
-                            <h3>${item.Title}</h3>
-                            <p>${item.description}</p>
-                            ${item.tags ? item.tags.split(',').map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
-                        </div>
-                    `;
-
-                    if (item.Id % 2 === 1) {
-                        document.querySelector('.experience ul.quotes2').appendChild(li);
-                    } else {
-                        document.querySelector('.experience ul.quotes1').appendChild(li);
-                    }
-
-                    function colorPastelPorPalabra(palabra) {
-                        var suma = 0;
-                        for (var i = 0; i < palabra.length; i++) {
-                            suma += palabra.charCodeAt(i);
-                        }
-                        var hue = (suma * 137.5) % 360;
-                        return `hsl(${hue}, 100%, 85%)`;
-                    }
-
-                    var etiquetas = document.querySelectorAll('.tag');
-                    etiquetas.forEach(function(etiqueta) {
-                        var palabra = etiqueta.innerText.trim();
-                        etiqueta.style.backgroundColor = colorPastelPorPalabra(palabra);
-                    });
-                });
-            })
-            .catch(error => {
-                console.error('Error en la petición:', error);
-            });
-        });
-    </script>
-
 </body>
 </html>
