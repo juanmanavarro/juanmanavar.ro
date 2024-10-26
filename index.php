@@ -27,8 +27,8 @@ function readEnv($clave) {
     return getenv($clave);
 }
 
-$url = readEnv('NOCODB_URL') . '?where=(active,eq,1)&shuffle=1';
-$token = readEnv('NOCODB_TOKEN');
+$url = readEnv('API_URL') . '?where=(active,eq,1)&shuffle=1';
+$token = readEnv('API_TOKEN');
 
 $options = [
     'http' => [
