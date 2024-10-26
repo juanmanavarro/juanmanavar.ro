@@ -55,6 +55,7 @@ if ($response === FALSE) {
     <link href="https://bootswatch.com/5/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
     <link rel="icon" href="./favicon.jpg">
+    <script defer data-domain="<?php echo readEnv('SITE_DOMAIN'); ?>" src="https://analytics.juanma.app/js/script.js"></script>
 </head>
 <body data-bs-theme="dark">
     <div class="container-fluid">
