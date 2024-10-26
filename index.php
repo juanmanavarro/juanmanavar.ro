@@ -12,11 +12,23 @@ function getColor($tag) {
     return $color;
 }
 
-$url = 'https://nocodb.juanma.app/api/v2/tables/mwonxxs73rj8p2y/records?where=(active,eq,1)&shuffle=1';
-if ($_SERVER['SERVER_NAME'] === 'localhost') {
-    putenv("NOCODB_TOKEN=KvIsjaRMeCm6VViKQ-X8wP0oNC-JtfggAyM4s86O");
+function readEnv($clave) {
+    $ruta = __DIR__ . '/.env';
+    if (file_exists($ruta)) {
+        $contenido = file_get_contents($ruta);
+        $lineas = explode("\n", $contenido);
+        foreach ($lineas as $linea) {
+            list($k, $v) = explode('=', $linea, 2) + [NULL, NULL];
+            if ($k === $clave) {
+                return trim($v);
+            }
+        }
+    }
+    return getenv($clave);
 }
-$token = getenv('NOCODB_TOKEN');
+
+$url = readEnv('NOCODB_URL') . '?where=(active,eq,1)&shuffle=1';
+$token = readEnv('NOCODB_TOKEN');
 
 $options = [
     'http' => [
