@@ -29,6 +29,23 @@
                 }
             }
         }
+
+        function getColor(tag) {
+            const stringToColor = (str) => {
+                let hash = 0;
+                for (let i = 0; i < str.length; i++) {
+                    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+                }
+                let color = '#';
+                for (let i = 0; i < 3; i++) {
+                    const value = (hash >> (i * 8)) & 0xFF;
+                    color += ('00' + value.toString(16)).substr(-2);
+                }
+                return color;
+            };
+
+            return stringToColor(tag);
+        }
     </script>
 </head>
 <body data-bs-theme="dark">
@@ -60,7 +77,7 @@
                                         <template x-if="job.tags">
                                             <div>
                                                 <template x-for="tag in job.tags.split(',')">
-                                                    <span class="badge bg-primary me-1 mb-1" x-text="tag.trim()"></span>
+                                                    <span :style="`background-color: ${getColor(tag.trim())};`" class="badge me-1 mb-1" x-text="tag.trim()"></span>
                                                 </template>
                                             </div>
                                         </template>
