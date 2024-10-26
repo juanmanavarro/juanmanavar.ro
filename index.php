@@ -13,7 +13,10 @@ function getColor($tag) {
 }
 
 $url = 'https://nocodb.juanma.app/api/v2/tables/mwonxxs73rj8p2y/records?where=(active,eq,1)&shuffle=1';
-$token = 'KvIsjaRMeCm6VViKQ-X8wP0oNC-JtfggAyM4s86O';
+if ($_SERVER['SERVER_NAME'] === 'localhost') {
+    putenv("NOCODB_TOKEN=KvIsjaRMeCm6VViKQ-X8wP0oNC-JtfggAyM4s86O");
+}
+$token = getenv('NOCODB_TOKEN');
 
 $options = [
     'http' => [
