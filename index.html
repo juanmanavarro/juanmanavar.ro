@@ -45,8 +45,8 @@
                 <li class="list-inline-item"><a class="text-decoration-none" href="tel:+34613086944">TELÉFONO</a></li>
             </ul>
         </header>
-        <main style="margin: 180px 0 80px;">
-            <section class="p-5">
+        <main style="margin: 180px 0 120px;">
+            <section class="p-0 p-sm-3">
                 <template x-data="createDataRetriever()" x-init="fetchJobs()" x-if="jobs.length > 0">
                     <div class="row">
                         <template x-for="job in jobs" :key="job.Id">
