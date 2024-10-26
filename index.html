@@ -2,11 +2,9 @@
 <html lang="es">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Juanma Navarro | Desarrollador Freelance</title>
-    <meta name="description" content="Juanma Navarro | Desarrollador Freelance">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/all.css" type="text/css">
-    <link rel="stylesheet" href="./assets/my.css" type="text/css">
+    <title>Juanma Navarro | Programador Autónomo</title>
+    <meta name="description" content="Juanma Navarro | Programador Autónomo">
+    <link href="https://bootswatch.com/5/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
     <link rel="icon" href="./favicon.jpg">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
@@ -33,77 +31,57 @@
         }
     </script>
 </head>
-<body>
-    <div class="wrapper" style="display: block; opacity: 1;">
-        <div class="footer">
-            <div class="innerWrap" style="display: flex; justify-content: center;">
-                <ul>
-                    <li><a href="https://github.com/juanmanavarro" target="_blank">GITHUB</a></li>
-                    <li><a href="https://telegram.me/juanmanavarro" target="_blank">TELEGRAM</a></li>
-                    <li><a href="https://api.whatsapp.com/send?phone=34613086944" target="_blank">WHATSAPP</a></li>
-                    <li><a href="https://www.linkedin.com/in/juanmanavarro/" target="_blank">LINKEDIN</a></li>
-                    <li><a rel="nofollow" href="mailto:hola@juanmanavar.ro">EMAIL</a></li>
-                    <li><a href="tel:+34613086944">TELÉFONO</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="header">
-            <div class="innerWrap">
-                <div class="titleWrap">
-                    <h1 class="titleSlideUp aboutTitle" style="margin-bottom: 0px;">
-                        <span class="first" style="opacity: 1; bottom: 0px;">Juanma Navarro</span>
-                    </h1>
-                    <p style="opacity: 1; bottom: 0px;">Desarrollador Freelance</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="testimonials experience grey container-fluid px-3" style="opacity: 1; bottom: 0px;">
-            <div x-data="createDataRetriever()" x-init="fetchJobs()" class="row">
-                <template x-if="jobs.length > 0">
-                <div class="row">
-                    <template x-for="job in jobs" :key="job.Id">
-                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-4">
-                            <div class="experienceItem bg-white h-100" style="cursor: pointer; border-radius: 10px;">
-                                <template x-if="job.image && job.image[0] && job.image[0].thumbnails && job.image[0].thumbnails.card_cover">
-                                    <img :src="`https://nocodb.juanma.app/${job.image[0].thumbnails.card_cover.signedPath}`"
-                                            class="img-fluid w-100"
-                                            :alt="job.Title"
-                                            style="border-top-left-radius: 10px; border-top-right-radius: 10px; object-fit: cover; height: 200px;">
-                                </template>
-                                <div class="p-4">
-                                    <h3 x-text="job.Title" class="mb-3"></h3>
-                                    <p x-text="job.description" class="mb-3"></p>
-                                    <template x-if="job.tags">
-                                        <div>
-                                            <template x-for="tag in job.tags.split(',')">
-                                                <span class="badge bg-primary me-1 mb-1" x-text="tag.trim()"></span>
-                                            </template>
-                                        </div>
-                                    </template>
+<body data-bs-theme="dark">
+    <div class="container-fluid">
+        <header class="text-center py-3 fixed-top bg-dark">
+            <h1>Juanma Navarro</h1>
+            <p>Programador Autónomo</p>
+            <ul class="list-unstyled list-inline">
+                <li class="list-inline-item"><a class="text-decoration-none" href="https://github.com/juanmanavarro" target="_blank">GITHUB</a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" href="https://telegram.me/juanmanavarro" target="_blank">TELEGRAM</a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" href="https://api.whatsapp.com/send?phone=34613086944" target="_blank">WHATSAPP</a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" href="https://www.linkedin.com/in/juanmanavarro/" target="_blank">LINKEDIN</a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" rel="nofollow" href="mailto:hola@juanmanavar.ro">EMAIL</a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" href="tel:+34613086944">TELÉFONO</a></li>
+            </ul>
+        </header>
+        <main style="margin: 180px 0 80px;">
+            <section class="p-5">
+                <template x-data="createDataRetriever()" x-init="fetchJobs()" x-if="jobs.length > 0">
+                    <div class="row">
+                        <template x-for="job in jobs" :key="job.Id">
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-4">
+                                <div class="card bg-dark" style="cursor: pointer; border-radius: 10px;">
+                                    <div :style="`border-top-left-radius: 10px; border-top-right-radius: 10px;height: 250px; background-image: url('https://nocodb.juanma.app/${job.image[0].thumbnails.card_cover.signedPath}'); background-size: cover; background-position: top;`">
+                                    </div>
+                                    <div class="p-4 border-top">
+                                        <h3 x-text="job.Title" class="mb-3"></h3>
+                                        <p x-text="job.description" class="mb-3"></p>
+                                        <template x-if="job.tags">
+                                            <div>
+                                                <template x-for="tag in job.tags.split(',')">
+                                                    <span class="badge bg-primary me-1 mb-1" x-text="tag.trim()"></span>
+                                                </template>
+                                            </div>
+                                        </template>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </template>
-                </div>
-                <template x-if="jobs.length === 0">
-                    <p>No hay trabajos disponibles en este momento.</p>
+                        </template>
+                    </div>
                 </template>
-            </div>
-        </div>
-
-        <div class="footer">
-            <div class="innerWrap" style="display: flex; justify-content: center;">
-                <ul>
-                    <li><a href="https://github.com/juanmanavarro" target="_blank">GITHUB</a></li>
-                    <li><a href="https://telegram.me/juanmanavarro" target="_blank">TELEGRAM</a></li>
-                    <li><a href="https://api.whatsapp.com/send?phone=34613086944" target="_blank">WHATSAPP</a></li>
-                    <li><a href="https://www.linkedin.com/in/juanmanavarro/" target="_blank">LINKEDIN</a></li>
-                    <li><a rel="nofollow" href="mailto:hola@juanmanavar.ro">EMAIL</a></li>
-                    <li><a href="tel:+34613086944">TELÉFONO</a></li>
-                </ul>
-            </div>
-        </div>
+            </section>
+        </main>
+        <footer class="text-center p-5 fixed-bottom bg-dark">
+            <ul class="list-unstyled list-inline mb-0">
+                <li class="list-inline-item"><a class="text-decoration-none" href="https://github.com/juanmanavarro" target="_blank">GITHUB</a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" href="https://telegram.me/juanmanavarro" target="_blank">TELEGRAM</a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" href="https://api.whatsapp.com/send?phone=34613086944" target="_blank">WHATSAPP</a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" href="https://www.linkedin.com/in/juanmanavarro/" target="_blank">LINKEDIN</a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" rel="nofollow" href="mailto:hola@juanmanavar.ro">EMAIL</a></li>
+                <li class="list-inline-item"><a class="text-decoration-none" href="tel:+34613086944">TELÉFONO</a></li>
+            </ul>
+        </footer>
     </div>
 </body>
 </html>
