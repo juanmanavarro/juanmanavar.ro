@@ -76,11 +76,11 @@ if ($response === FALSE) {
                 <div class="row">
                     <?php foreach ($jobs as $job): ?>
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-4">
-                            <div class="card bg-dark" style="cursor: pointer; border-radius: 10px;">
+                            <div class="card bg-dark" style="border-radius: 10px;">
                                 <div style="border-top-left-radius: 10px; border-top-right-radius: 10px; height: 250px; background-image: url('https://nocodb.juanma.app/<?php echo $job['image'][0]['thumbnails']['card_cover']['signedPath']; ?>'); background-size: cover; background-position: top;">
                                 </div>
                                 <div class="p-4 border-top">
-                                    <h3 class="mb-3"><?php echo htmlspecialchars($job['Title']); ?></h3>
+                                    <h3 class="mb-3"><a class="text-decoration-none" href="<?php echo $job['url']; ?>" target="_blank"><?php echo htmlspecialchars($job['Title']); ?></a></h3>
                                     <p class="mb-3"><?php echo htmlspecialchars($job['description']); ?></p>
                                     <?php if (!empty($job['tags'])): ?>
                                         <div>
