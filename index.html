@@ -1,115 +1,184 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juanma Navarro - Desarrollo web a medida</title>
-    <meta name="description" content="Desarrollo web a medida para empresas y autónomos. Programador full-stack especializado en automatizaciones, APIs y soluciones con IA.">
-    <link rel="icon" type="image/svg+xml" href="favicon.jpg">
-    <link rel="stylesheet" href="styles.css">
+    <title>Juanma Navarro - Desarrollador Web</title> <!-- EDIT: Site Title -->
+    <meta name="description" content="Portfolio de Juanma Navarro, desarrollador especializado en aplicaciones web, automatización y sistemas modernos."> <!-- EDIT: Description -->
 
+    <!-- Favicon -->
+    <link rel="icon" href="assets/avatar.jpg" type="image/jpeg">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Desarrollo web a medida para empresas y autónomos</h1>
-            <p class="subtitle">Soy Juanma Navarro, programador full-stack autónomo. Desarrollo soluciones reales.</p>
-            <div class="cta-buttons">
-                <a href="#contacto" class="btn btn-primary">Hablemos de tu proyecto</a>
-                <a href="#experiencia" class="btn btn-secondary">Ver portfolio</a>
-            </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container flex items-center justify-between" style="width: 100%;">
+            <a href="#" class="logo">
+                <!-- EDIT: Logo Image -->
+                <img src="assets/avatar.jpg" alt="Profile">
+                <span>Juanma Navarro</span> <!-- EDIT: Logo Text -->
+            </a>
+
+            <nav class="nav-links">
+                <a href="#work">Proyectos</a>
+                <a href="#services">Servicios</a>
+                <a href="#about">Sobre mí</a>
+                <a href="mailto:hola@juanmanavar.ro" class="text-primary">Contacto</a>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <!-- Servicios Section -->
-    <section class="servicios">
-        <div class="container">
-            <h2>Servicios que ofrezco</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Desarrollo a medida</h3>
-                    <p>Automatizaciones, APIs, integraciones entre sistemas y aplicaciones completas. Especialista en backend (PHP y Node.js) y frontend moderno.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Plugins y automatizaciones en WordPress</h3>
-                    <p>Conexiones con APIs externas, sincronización de datos, creación de shortcodes, paneles de administración personalizados y optimización de rendimiento.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Chatbots para WhatsApp y Telegram</h3>
-                    <p>Desarrollo chatbots completos: lógica, backend, flujos, webhooks, integración con bases de datos y panel de gestión si lo necesitas.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Aplicaciones web con Laravel & Vue</h3>
-                    <p>Portales internos, dashboards, formularios complejos, sistemas de facturación, CRM, paneles de control… totalmente personalizados.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Soluciones con inteligencia artificial</h3>
-                    <p>Implementación de flujos inteligentes para clasificación de datos, generación automática de contenido, extracción de información, asistentes conversacionales y automatización de tareas repetitivas.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Consultoría técnica</h3>
-                    <p>Auditoría, optimización de sistemas, solución de problemas y acompañamiento técnico continuo.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero container">
+            <!-- EDIT: Hero Title -->
+            <h1 class="hero-title">
+                Más que desarrollo,<br>
+                construyo soluciones reales.
+            </h1>
 
-    <!-- Por qué trabajar conmigo -->
-    <section class="porque">
-        <div class="container">
-            <h2>Por qué trabajar conmigo</h2>
-            <ul class="benefits-list">
-                <li>+10 años de experiencia en desarrollo web.</li>
-                <li>Especializado en automatizar procesos y ahorrar tiempo a empresas.</li>
-                <li>Implementación de soluciones con IA adaptadas a tu negocio.</li>
-                <li>Comunicación rápida y clara.</li>
-                <li>Trabajo 100% documentado para facilitar mantenimiento futuro.</li>
-            </ul>
-        </div>
-    </section>
+            <!-- EDIT: Hero Subtitle -->
+            <p class="hero-subtitle">
+                Soy Juanma, desarrollador especializado en aplicaciones web, automatización y sistemas modernos. Creo experiencias rápidas, funcionales y pensadas para negocio.
+            </p>
 
-    <!-- Experiencia Section -->
-    <section id="experiencia" class="experiencia">
-        <div class="container">
-            <h2>Experiencia profesional</h2>
-            <p class="intro">He trabajado como programador full-stack para empresas como Soysuper y TextPocket, además de múltiples proyectos freelance desde 2014. He desarrollado aplicaciones móviles, sistemas internos, paneles de control, integraciones entre servicios externos y soluciones reales para negocios.</p>
-
-            <h3>Tecnologías destacadas:</h3>
-            <div class="tech-grid">
-                <span class="tech-badge">Frontend: Vue, React, AngularJS</span>
-                <span class="tech-badge">Backend: Laravel, Symfony, Node.js, NestJS</span>
-                <span class="tech-badge">Chatbots: WhatsApp y Telegram</span>
-                <span class="tech-badge">IA aplicada: clasificadores, extracción de datos, asistentes conversacionales</span>
-                <span class="tech-badge">DevOps: Linux, Docker, AWS</span>
-                <span class="tech-badge">Bases de datos: MySQL, MongoDB</span>
-                <span class="tech-badge">WordPress avanzado: desarrollo de plugins, integración de APIs, automatización</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto Section -->
-    <section id="contacto" class="contacto">
-        <div class="container">
-            <h2>Cuéntame tu proyecto</h2>
-            <p>Envíame un mensaje y te responderé lo antes posible. Trabajo con clientes de cualquier parte y me adapto a tu proyecto, sea grande o pequeño.</p>
-
-            <div class="contact-info">
-                <p><strong>Email:</strong> <a href="mailto:hola@juanmanavar.ro">hola@juanmanavar.ro</a></p>
-                <p><strong>Teléfono:</strong> 613 08 69 44</p>
+            <div class="flex gap-4">
+                <!-- EDIT: CTA Buttons -->
+                <a href="mailto:hola@juanmanavar.ro" class="btn btn-primary">Hablemos</a>
+                <a href="#work" class="btn btn-secondary">Ver proyectos</a>
             </div>
 
-            <div class="cta-buttons">
-                <a href="https://wa.me/34613086944" class="btn btn-primary" target="_blank">Contactar por WhatsApp</a>
-                <a href="https://t.me/juanmanavarro" class="btn btn-secondary" target="_blank">Contactar por Telegram</a>
+            <!-- Services Grid -->
+            <div class="services-grid" id="services">
+                <!-- EDIT: Service New 1 (AI) -->
+                <div class="service-item">
+                    <h3 class="service-title">Inteligencia Artificial</h3>
+                    <p class="text-sm text-muted">Integración de modelos de IA, automatización con LLMs, procesamiento de datos y creación de herramientas inteligentes que aceleran tu negocio.</p>
+                </div>
+                <!-- EDIT: Service 1 -->
+                <div class="service-item">
+                    <h3 class="service-title">Desarrollo Web</h3>
+                    <p class="text-sm text-muted">Investigación, arquitectura, frontend y backend con las tecnologías más modernas.</p>
+                </div>
+                <!-- EDIT: Service 2 -->
+                <div class="service-item">
+                    <h3 class="service-title">Sistemas & Integraciones</h3>
+                    <p class="text-sm text-muted">Conexión con APIs, automatización de procesos y desarrollo de herramientas internas.</p>
+                </div>
+                <!-- EDIT: Service 3 -->
+                <div class="service-item">
+                    <h3 class="service-title">Aplicaciones SaaS</h3>
+                    <p class="text-sm text-muted">Plataformas escalables, robustas y preparadas para crecer sin fricción.</p>
+                </div>
+                <!-- EDIT: Service New 2 (Optimization) -->
+                <div class="service-item">
+                    <h3 class="service-title">Optimización & Rendimiento</h3>
+                    <p class="text-sm text-muted">Mejoras profundas en velocidad, SEO técnico, reducción de carga, auditorías y refactorización para que tu aplicación vaya siempre un paso por delante.</p>
+                </div>
+                <!-- EDIT: Service 4 -->
+                <div class="service-item">
+                    <h3 class="service-title">Wordpress</h3>
+                    <p class="text-sm text-muted">Desarrollos a medida, temas y plugins personalizados, optimización y seguridad para proyectos escalables.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Juanma Navarro. Todos los derechos reservados.</p>
+        <!-- Portfolio Section -->
+        <section class="container py-16" id="work">
+            <div class="grid grid-cols-1 md:grid-cols-2 md:grid-cols-3 gap-8">
+
+                <!-- EDIT: Project 1 -->
+                <a href="#" class="project-card" style="background-color: #6d28d9;">
+                    <!-- Placeholder content, replace background-color with background-image -->
+                    <div style="color: white; font-weight: bold; font-size: 2rem;">Trazability</div>
+                    <div class="project-content">
+                        <h3>Trazability</h3>
+                        <p class="text-sm">Sistema de trazabilidad</p>
+                    </div>
+                </a>
+
+                <!-- EDIT: Project 2 -->
+                <a href="#" class="project-card" style="background-color: #fbbf24;">
+                    <div style="color: white; font-weight: bold; font-size: 2rem;">Billing</div>
+                    <div class="project-content">
+                        <h3>Billing App</h3>
+                        <p class="text-sm">App de facturación</p>
+                    </div>
+                </a>
+
+                <!-- EDIT: Project 3 -->
+                <a href="#" class="project-card" style="background-color: #3b82f6;">
+                    <div style="color: white; font-weight: bold; font-size: 2rem;">Notify</div>
+                    <div class="project-content">
+                        <h3>Notify System</h3>
+                        <p class="text-sm">Sistema de notificaciones</p>
+                    </div>
+                </a>
+
+                <!-- EDIT: Project 4 -->
+                <a href="#" class="project-card" style="background-color: #ec4899;">
+                    <div style="color: white; font-weight: bold; font-size: 2rem;">Search</div>
+                    <div class="project-content">
+                        <h3>Search Engine</h3>
+                        <p class="text-sm">Motor de búsqueda</p>
+                    </div>
+                </a>
+
+                <!-- EDIT: Project 5 -->
+                <a href="#" class="project-card" style="background-color: #10b981;">
+                    <div style="color: white; font-weight: bold; font-size: 2rem;">Secure</div>
+                    <div class="project-content">
+                        <h3>Secure Dashboard</h3>
+                        <p class="text-sm">Dashboard de seguridad</p>
+                    </div>
+                </a>
+
+                <!-- EDIT: Project 6 -->
+                <a href="#" class="project-card" style="background-color: #f97316;">
+                    <div style="color: white; font-weight: bold; font-size: 2rem;">Bio Link</div>
+                    <div class="project-content">
+                        <h3>Bio Link Tool</h3>
+                        <p class="text-sm">Herramienta de Bio Link</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer container" id="about">
+        <div class="footer-grid">
+            <div>
+                <h2 class="text-xl font-bold mb-4">Juanma Navarro</h2>
+                <!-- EDIT: Footer Bio -->
+                <p class="text-muted" style="max-width: 400px;">
+                    Soy desarrollador independiente y me apasiona crear soluciones simples para problemas complejos. Disponible para proyectos freelance.
+                </p>
+                <a href="mailto:hola@juanmanavar.ro" class="text-primary font-bold mt-4" style="display: inline-block;">hola@juanmanavar.ro</a>
+            </div>
+
+            <div>
+                <h3 class="font-bold mb-4">Conecta</h3>
+                <ul class="flex flex-col gap-2 text-muted">
+                    <!-- EDIT: Social Links -->
+                    <li><a href="#">WhatsApp</a></li>
+                    <li><a href="#">Telegram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
+
 </body>
 </html>
