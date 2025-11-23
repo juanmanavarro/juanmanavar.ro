@@ -177,7 +177,7 @@ img {
 
 /* Hero */
 .hero {
-  padding: 80px 0 100px;
+  padding: 80px 20px 100px;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -258,7 +258,7 @@ img {
 /* Footer */
 .footer {
   border-top: 1px solid var(--border);
-  padding: 4rem 0;
+  padding: 4rem 20px;
   margin-top: 4rem;
 }
 
