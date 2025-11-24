@@ -94,63 +94,8 @@
 
         <!-- Portfolio Section -->
         <section class="container py-16" id="work">
-            <div class="grid grid-cols-1 md:grid-cols-2 md:grid-cols-3 gap-8">
-
-                <!-- EDIT: Project 1 -->
-                <a href="#" class="project-card" style="background-color: #6d28d9;">
-                    <!-- Placeholder content, replace background-color with background-image -->
-                    <div style="color: white; font-weight: bold; font-size: 2rem;">Trazability</div>
-                    <div class="project-content">
-                        <h3>Trazability</h3>
-                        <p class="text-sm">Sistema de trazabilidad</p>
-                    </div>
-                </a>
-
-                <!-- EDIT: Project 2 -->
-                <a href="#" class="project-card" style="background-color: #fbbf24;">
-                    <div style="color: white; font-weight: bold; font-size: 2rem;">Billing</div>
-                    <div class="project-content">
-                        <h3>Billing App</h3>
-                        <p class="text-sm">App de facturación</p>
-                    </div>
-                </a>
-
-                <!-- EDIT: Project 3 -->
-                <a href="#" class="project-card" style="background-color: #3b82f6;">
-                    <div style="color: white; font-weight: bold; font-size: 2rem;">Notify</div>
-                    <div class="project-content">
-                        <h3>Notify System</h3>
-                        <p class="text-sm">Sistema de notificaciones</p>
-                    </div>
-                </a>
-
-                <!-- EDIT: Project 4 -->
-                <a href="#" class="project-card" style="background-color: #ec4899;">
-                    <div style="color: white; font-weight: bold; font-size: 2rem;">Search</div>
-                    <div class="project-content">
-                        <h3>Search Engine</h3>
-                        <p class="text-sm">Motor de búsqueda</p>
-                    </div>
-                </a>
-
-                <!-- EDIT: Project 5 -->
-                <a href="#" class="project-card" style="background-color: #10b981;">
-                    <div style="color: white; font-weight: bold; font-size: 2rem;">Secure</div>
-                    <div class="project-content">
-                        <h3>Secure Dashboard</h3>
-                        <p class="text-sm">Dashboard de seguridad</p>
-                    </div>
-                </a>
-
-                <!-- EDIT: Project 6 -->
-                <a href="#" class="project-card" style="background-color: #f97316;">
-                    <div style="color: white; font-weight: bold; font-size: 2rem;">Bio Link</div>
-                    <div class="project-content">
-                        <h3>Bio Link Tool</h3>
-                        <p class="text-sm">Herramienta de Bio Link</p>
-                    </div>
-                </a>
-
+            <div class="grid grid-cols-1 md:grid-cols-2 md:grid-cols-3 gap-8" id="projects-grid">
+                <!-- Projects will be loaded from js/data.js -->
             </div>
         </section>
     </main>
@@ -169,16 +114,16 @@
 
             <div>
                 <h3 class="font-bold mb-4">Conecta</h3>
-                <ul class="flex flex-col gap-2 text-muted">
-                    <!-- EDIT: Social Links -->
-                    <li><a href="#">WhatsApp</a></li>
-                    <li><a href="#">Telegram</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">GitHub</a></li>
+                <ul class="flex flex-col gap-2 text-muted" id="socials-list">
+                    <!-- Social links will be loaded from js/data.js -->
                 </ul>
             </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 </html>
