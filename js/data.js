@@ -36,10 +36,10 @@ const portfolioData = {
       link: "https://facturead.com"
     },
     {
-      title: "keyguitar.juanma.app",
+      title: "keyguitar.app",
       description: "Fretboard virtual con teclado",
       color: "#f97316", // Orange
-      link: "https://keyguitar.juanma.app"
+      link: "https://keyguitar.app"
     }
   ],
   socials: [
