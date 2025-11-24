@@ -35,12 +35,12 @@ const portfolioData = {
       color: "#10b981", // Emerald
       link: "https://facturead.com"
     },
-    // {
-    //   title: "Bio Link Tool",
-    //   description: "Herramienta de Bio Link",
-    //   color: "#f97316", // Orange
-    //   link: "#"
-    // }
+    {
+      title: "keyguitar.juanma.app",
+      description: "Fretboard virtual con teclado",
+      color: "#f97316", // Orange
+      link: "https://keyguitar.juanma.app"
+    }
   ],
   socials: [
     {
