@@ -13,7 +13,7 @@ function renderProjects() {
   if (!container) return;
 
   container.innerHTML = portfolioData.projects.map(project => `
-    <a href="${project.link}" class="project-card" style="background-color: ${project.color};">
+    <a href="${project.link}" class="project-card" style="background-color: ${project.color};" target="_blank" rel="noopener noreferrer">
       <div style="color: white; font-weight: bold; font-size: 2rem;">${project.title.split(' ')[0]}</div>
       <div class="project-content">
         <h3>${project.title}</h3>
