@@ -36,6 +36,12 @@ const portfolioData = {
       link: "https://facturead.com"
     },
     {
+      title: "xpenser.chat",
+      description: "El gestor de gastos que aclara quién debe a quién",
+      color: "#0ea5e9", // Sky
+      link: "https://xpenser.chat"
+    },
+    {
       title: "keyguitar.app",
       description: "Fretboard virtual con teclado",
       color: "#f97316", // Orange
