@@ -12,6 +12,12 @@ const portfolioData = {
       link: "https://xtructai.com"
     },
     {
+      title: "autoescuela.chat",
+      description: "Tests de autoescuela por chat",
+      color: "#84cc16", // Lime
+      link: "https://autoescuela.chat"
+    },
+    {
       title: "mapisy.com",
       description: "Crea mapas sin complicaciones",
       color: "#fbbf24", // Amber
