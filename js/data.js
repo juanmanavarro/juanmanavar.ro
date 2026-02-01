@@ -52,6 +52,12 @@ const portfolioData = {
       description: "Fretboard virtual con teclado",
       color: "#f97316", // Orange
       link: "https://keyguitar.app"
+    },
+    {
+      title: "hayplan.es",
+      description: "Organiza planes en segundos",
+      color: "#14b8a6", // Teal
+      link: "https://hayplan.es"
     }
   ],
   socials: [
