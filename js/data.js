@@ -6,6 +6,12 @@
 const portfolioData = {
   projects: [
     {
+      title: "visitrack.es",
+      description: "Reporte comercial por WhatsApp",
+      color: "#ef4444", // Red
+      link: "https://visitrack.es/"
+    },
+    {
       title: "xtructai.com",
       description: "IA que entiende documentos",
       color: "#6d28d9", // Purple
