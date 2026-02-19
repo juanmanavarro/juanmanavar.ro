@@ -12,6 +12,12 @@ const portfolioData = {
       link: "https://visitrack.es/"
     },
     {
+      title: "veribot.app",
+      description: "Reseñas verificadas con ticket real",
+      color: "#0f172a", // Slate
+      link: "https://veribot.app"
+    },
+    {
       title: "xtructai.com",
       description: "IA que entiende documentos",
       color: "#6d28d9", // Purple
