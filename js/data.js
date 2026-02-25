@@ -72,6 +72,20 @@ const portfolioData = {
       link: "https://hayplan.es"
     }
   ],
+  jobs: [
+    {
+      title: "Rotumaker",
+      description: "Plugin de WordPress: configurador de producto",
+      color: "#1d4ed8", // Blue
+      link: "https://rotumaker.com/producto/letras-recortadas-pvc-lacado-en-color/"
+    },
+    {
+      title: "Surfrider España",
+      description: "Plugin de WordPress: formulario de donaciones",
+      color: "#0f766e", // Teal
+      link: "https://surfrider.es/donacion/"
+    }
+  ],
   socials: [
     {
       name: "WhatsApp",

@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   renderProjects();
+  renderJobs();
   renderSocials();
 });
 
@@ -65,4 +66,21 @@ function renderSocials() {
   container.innerHTML = portfolioData.socials.map(social => `
     <li><a href="${social.link}">${social.name}</a></li>
   `).join('');
+}
+
+function renderJobs() {
+  const container = document.getElementById('jobs-grid');
+  if (!container || !portfolioData.jobs) return;
+
+  container.innerHTML = portfolioData.jobs.map(job => `
+    <a href="${job.link}" class="project-card job-card" style="background-color: ${job.color || '#111827'};" target="_blank" rel="noopener noreferrer">
+      <div style="color: white; font-weight: bold; font-size: 2rem;">${job.title.split(' ')[0]}</div>
+      <div class="project-content">
+        <h3>${job.title}</h3>
+        <p class="text-sm">${job.description}</p>
+      </div>
+    </a>
+  `).join('');
+
+  adjustProjectTitleSizes();
 }
