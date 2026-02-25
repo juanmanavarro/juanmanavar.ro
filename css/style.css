@@ -319,8 +319,17 @@ img {
   gap: 3rem;
 }
 
+.footer-grid > div:last-child {
+  justify-self: start;
+}
+
 @media (min-width: 768px) {
   .footer-grid {
     grid-template-columns: 2fr 1fr;
+  }
+
+  .footer-grid > div:last-child {
+    justify-self: end;
+    text-align: right;
   }
 }
