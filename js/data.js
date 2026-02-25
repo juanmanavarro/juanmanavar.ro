@@ -84,6 +84,18 @@ const portfolioData = {
       description: "Plugin de WordPress: formulario de donaciones",
       color: "#0f766e", // Teal
       link: "https://surfrider.es/donacion/"
+    },
+    {
+      title: "Invitoyo",
+      description: "Plugin de WordPress: conexión con panel externo de gestión de invitaciones",
+      color: "#db2777", // Pink
+      link: "https://invitoyo.com"
+    },
+    {
+      title: "Ananda Bucari",
+      description: "Plugin de WordPress para gestión de video cursos",
+      color: "#7c3aed", // Violet
+      link: "https://www.anandabucari.com/"
     }
   ],
   socials: [
