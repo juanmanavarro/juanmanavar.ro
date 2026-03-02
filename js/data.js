@@ -70,6 +70,12 @@ const portfolioData = {
       description: "Organiza planes en segundos",
       color: "#14b8a6", // Teal
       link: "https://hayplan.es"
+    },
+    {
+      title: "glosario.online",
+      description: "Creador de glosarios",
+      color: "#8b5cf6", // Violet
+      link: "https://glosario.online"
     }
   ],
   jobs: [
