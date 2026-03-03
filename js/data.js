@@ -76,6 +76,12 @@ const portfolioData = {
       description: "Creador de glosarios",
       color: "#8b5cf6", // Violet
       link: "https://glosario.online"
+    },
+    {
+      title: "configurador.app",
+      description: "Configurador de producto",
+      color: "#1d4ed8", // Blue
+      link: "https://configurador.juanma.app"
     }
   ],
   jobs: [
