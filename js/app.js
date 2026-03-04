@@ -14,7 +14,15 @@ function renderProjects() {
   if (!container) return;
 
   container.innerHTML = portfolioData.projects.map(project => `
-    <a href="${project.link}" class="project-card" style="background-color: ${project.color};" target="_blank" rel="noopener noreferrer">
+    <a
+      href="${project.link}"
+      class="project-card"
+      style="background-color: ${project.color};"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="${project.title} - ${project.description}"
+      aria-label="Abrir proyecto ${project.title}: ${project.description}"
+    >
       <div style="color: white; font-weight: bold; font-size: 2rem;">${project.title.split(' ')[0]}</div>
       <div class="project-content">
         <h3>${project.title}</h3>
@@ -64,7 +72,14 @@ function renderSocials() {
   if (!container) return;
 
   container.innerHTML = portfolioData.socials.map(social => `
-    <li><a href="${social.link}">${social.name}</a></li>
+    <li>
+      <a
+        href="${social.link}"
+        target="_blank"
+        rel="noopener noreferrer me"
+        title="${social.name} de Juanma Navarro"
+      >${social.name}</a>
+    </li>
   `).join('');
 }
 
@@ -73,7 +88,15 @@ function renderJobs() {
   if (!container || !portfolioData.jobs) return;
 
   container.innerHTML = portfolioData.jobs.map(job => `
-    <a href="${job.link}" class="project-card job-card" style="background-color: ${job.color || '#111827'};" target="_blank" rel="noopener noreferrer">
+    <a
+      href="${job.link}"
+      class="project-card job-card"
+      style="background-color: ${job.color || '#111827'};"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="${job.title} - ${job.description}"
+      aria-label="Abrir trabajo ${job.title}: ${job.description}"
+    >
       <div style="color: white; font-weight: bold; font-size: 2rem;">${job.title.split(' ')[0]}</div>
       <div class="project-content">
         <h3>${job.title}</h3>
