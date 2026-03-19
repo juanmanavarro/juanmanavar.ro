@@ -78,6 +78,12 @@ const portfolioData = {
       link: "https://glosario.online"
     },
     {
+      title: "ghostseen.com",
+      description: "Recupera mensajes eliminados de WhatsApp",
+      color: "#25d366", // Green
+      link: "https://ghostseen.com/"
+    },
+    {
       title: "configurador.app",
       description: "Configurador de producto",
       color: "#1d4ed8", // Blue
