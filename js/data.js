@@ -114,6 +114,12 @@ const portfolioData = {
       description: "Plugin de WordPress para gestión de video cursos",
       color: "#7c3aed", // Violet
       link: "https://www.anandabucari.com/"
+    },
+    {
+      title: "Taberna Damajuana",
+      description: "Web corporativa para restaurante y reservas",
+      color: "#7f1d1d", // Dark red
+      link: "https://tabernadamajuana.com/"
     }
   ],
   socials: [
