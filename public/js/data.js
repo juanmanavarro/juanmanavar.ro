@@ -37,7 +37,7 @@ const portfolioData = {
     },
     {
       title: "mailink.me",
-      description: "Envía datos confidenciales",
+      description: "Mándalo a tu email en 2 toques",
       color: "#3b82f6", // Blue
       link: "https://mailink.me"
     },

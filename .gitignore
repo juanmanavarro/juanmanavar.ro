@@ -1,1 +1,8 @@
 .env
+.agent/
+.agents/
+.ddev/
+.codex
+
+skills-lock.json
+stitch_wordpress_developer_for_agencies.zip

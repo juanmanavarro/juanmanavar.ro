@@ -1,0 +1,25 @@
+Options -Indexes
+
+RewriteEngine On
+
+# ==========================================
+# BLOQUEAR DIRECTORIOS PRIVADOS / INTERNOS
+# ==========================================
+
+RewriteRule ^\.agent(?:/|$) - [F,L]
+RewriteRule ^\.agents(?:/|$) - [F,L]
+RewriteRule ^\.ddev(?:/|$) - [F,L]
+RewriteRule ^\.git(?:/|$) - [F,L]
+RewriteRule ^\.codex(?:/|$) - [F,L]
+
+# ==========================================
+# BLOQUEAR ARCHIVOS INTERNOS
+# ==========================================
+
+RewriteRule ^skills-lock\.json$ - [F,L]
+RewriteRule ^\.gitignore$ - [F,L]
+RewriteRule ^stitch_wordpress_developer_for_agencies\.zip$ - [F,L]
+
+# Bloquear cualquier otro archivo oculto,
+# excepto .well-known (SSL, Let's Encrypt, etc.)
+RewriteRule "(^|/)\.(?!well-known(?:/|$))" - [F,L]
